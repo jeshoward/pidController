@@ -1,5 +1,35 @@
-#include <gtest/gtest.h>
+/*
+ * @file pidController_test.cpp
+ * @author Jessica Howard
+ * @copyright GNU public license
+ *
+ * @brief h file for pidController implementation
+ *
+ */
 
-TEST(dummy, should_pass) {
-  EXPECT_EQ(1, 1);
+#include <gtest/gtest.h>
+#include "pidController.h"
+
+using namespace std;
+
+TEST(pidTest, kValsInitializationTest) {
+  pidController c;
+  c.setKp(3);
+  c.setKi(4);
+  c.setKd(5);
+  EXPECT_EQ(c.getKp(), 3);
+  EXPECT_EQ(c.getKi(), 4);
+  EXPECT_EQ(c.getKd(), 5);
+}
+
+TEST(pidTest, OutputErrorCheck01) {
+  pidController c(0.01, 0.001, 0.01, 0.1, 0);
+  c.start();
+  EXPECT_NEAR(c.getOutput(2), 0.2202, 0.0001);
+}
+
+TEST(pidTest, OutputErrorCheck02) {
+  pidController c(0.01, 0.001, 0.01, 0.1, 0);
+  c.start();
+  EXPECT_NEAR(c.getOutput(10), 1.101, 0.001);
 }

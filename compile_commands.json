@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/jessica/eclipse-workspace/Week 4/pidController/app",
+  "command": "/usr/bin/c++ -std=c++14   -I\"/home/jessica/eclipse-workspace/Week 4/pidController/include\"  -Wall -Wextra -Wpedantic -g -g   -std=gnu++14 -o CMakeFiles/shell-app.dir/main.cpp.o -c \"/home/jessica/eclipse-workspace/Week 4/pidController/app/main.cpp\"",
+  "file": "/home/jessica/eclipse-workspace/Week 4/pidController/app/main.cpp"
+},
+{
+  "directory": "/home/jessica/eclipse-workspace/Week 4/pidController/app",
+  "command": "/usr/bin/c++ -std=c++14   -I\"/home/jessica/eclipse-workspace/Week 4/pidController/include\"  -Wall -Wextra -Wpedantic -g -g   -std=gnu++14 -o CMakeFiles/shell-app.dir/pidController.cpp.o -c \"/home/jessica/eclipse-workspace/Week 4/pidController/app/pidController.cpp\"",
+  "file": "/home/jessica/eclipse-workspace/Week 4/pidController/app/pidController.cpp"
+},
+{
+  "directory": "/home/jessica/eclipse-workspace/Week 4/pidController/test",
+  "command": "/usr/bin/c++ -std=c++14   -I\"/home/jessica/eclipse-workspace/Week 4/pidController/test/../vendor/googletest/googletest/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/include\"  -Wall -Wextra -Wpedantic -g -g   -std=gnu++14 -o CMakeFiles/cpp-test.dir/main.cpp.o -c \"/home/jessica/eclipse-workspace/Week 4/pidController/test/main.cpp\"",
+  "file": "/home/jessica/eclipse-workspace/Week 4/pidController/test/main.cpp"
+},
+{
+  "directory": "/home/jessica/eclipse-workspace/Week 4/pidController/test",
+  "command": "/usr/bin/c++ -std=c++14   -I\"/home/jessica/eclipse-workspace/Week 4/pidController/test/../vendor/googletest/googletest/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/include\"  -Wall -Wextra -Wpedantic -g -g   -std=gnu++14 -o CMakeFiles/cpp-test.dir/test.cpp.o -c \"/home/jessica/eclipse-workspace/Week 4/pidController/test/test.cpp\"",
+  "file": "/home/jessica/eclipse-workspace/Week 4/pidController/test/test.cpp"
+},
+{
+  "directory": "/home/jessica/eclipse-workspace/Week 4/pidController/test",
+  "command": "/usr/bin/c++ -std=c++14   -I\"/home/jessica/eclipse-workspace/Week 4/pidController/test/../vendor/googletest/googletest/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/include\"  -Wall -Wextra -Wpedantic -g -g   -std=gnu++14 -o CMakeFiles/cpp-test.dir/__/app/pidController.cpp.o -c \"/home/jessica/eclipse-workspace/Week 4/pidController/app/pidController.cpp\"",
+  "file": "/home/jessica/eclipse-workspace/Week 4/pidController/app/pidController.cpp"
+},
+{
+  "directory": "/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest",
+  "command": "/usr/bin/c++ -std=c++14   -I\"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest\"  -Wall -Wextra -Wpedantic -g -g   -Wall -Wextra -Wpedantic -g -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c \"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/src/gtest-all.cc\"",
+  "file": "/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest",
+  "command": "/usr/bin/c++ -std=c++14   -I\"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/include\" -I\"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest\"  -Wall -Wextra -Wpedantic -g -g   -Wall -Wextra -Wpedantic -g -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c \"/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/src/gtest_main.cc\"",
+  "file": "/home/jessica/eclipse-workspace/Week 4/pidController/vendor/googletest/googletest/src/gtest_main.cc"
+}
+]
