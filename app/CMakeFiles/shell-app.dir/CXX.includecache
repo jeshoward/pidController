@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jessica/eclipse-workspace/Week 4/partner/pid_controller/app/main.cpp
+pid_controller.hpp
+/home/jessica/eclipse-workspace/Week 4/partner/pid_controller/app/pid_controller.hpp
+
+/home/jessica/eclipse-workspace/Week 4/partner/pid_controller/app/pid_controller.cpp
+pid_controller.hpp
+/home/jessica/eclipse-workspace/Week 4/partner/pid_controller/app/pid_controller.hpp
+
+include/pid_controller.hpp
+iostream
+-
+
