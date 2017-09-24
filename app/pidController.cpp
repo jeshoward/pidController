@@ -7,6 +7,7 @@
  *
  */
 
+#include <cmath>
 #include <pidController.h>
 
 namespace std {
@@ -15,44 +16,35 @@ pidController::pidController() {
   ki = 1;
   kd = 1;
   previousError = 0;
-  timeStep = 1;
-  setPoint = 1;
+  timeStep = 0.1;
+  setPoint = 0;
   input = 0;
   output = 0;
-  running = false;
 }
 
-pidController::pidController(double Kp, double Ki, double Kd, int TimeStep, double SetPoint) {
+pidController::pidController(double Kp, double Ki, double Kd, double TimeStep,
+                             double Input) {
 
   kp = Kp;
   ki = Ki;
   kd = Kd;
   previousError = 0;
   timeStep = TimeStep;
-  setPoint = SetPoint;
-  input = 0;
-  output = -1;
-  running = false;
-}
-
-void pidController::start() {
-
-}
-
-void pidController::stop() {
-
+  setPoint = 0;
+  input = Input;
+  output = 0;
 }
 
 void pidController::setKp(double Kp) {
-
+  kp = Kp;
 }
 
 void pidController::setKi(double Ki) {
-
+  ki = Ki;
 }
 
 void pidController::setKd(double Kd) {
-
+  kd = Kd;
 }
 
 double pidController::getKp() {
@@ -75,11 +67,33 @@ double pidController::getSetPoint() {
   return setPoint;
 }
 
-void setTimeStep(int TimeStep) {
-
+void pidController::setTimeStep(double TimeStep) {
+  timeStep = TimeStep;
 }
 
-double getOutput(double SetPoint) {
+double pidController::getOutput(double SetPoint) {
+  /*
+   * TODO Neel:
+   * Calculate your error (setpoint - input)
+   * Reset to 0 variables that will be maintained through the loop
+   * (previousError and integral)
+   *
+   * Start your loop, run while abs(error) > 0.0001
+   * Inside the loop:
+   *  Calculate your integral
+   *    (integral += error * timeStep
+   *  Calculate your derivative
+   *    (derivative = (error - previousError) / timeStep
+   *  Calculate your output
+   *    (kp * error + ki * integral + kd * derivative)
+   *  Update your input
+   *    (input += output)
+   *  Reset your error variables
+   *    (previousError = error, error = setpoint - input)
+   *  End loop
+   *
+   * Return output
+   */
   return 0;
 }
 

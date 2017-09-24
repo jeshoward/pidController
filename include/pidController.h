@@ -20,11 +20,10 @@ class pidController {
   double ki; ///< integral parameter
   double kd; ///< derivative parameter
   double previousError; ///< error from previous cycle
-  int timeStep; ///< time step in seconds
+  double timeStep; ///< time step
   double setPoint; ///< desired point
   double input; ///< current point
   double output; ///< output to bring current to desired point
-  bool running; ///< whether or not the controller is running
  public:
 
   /**
@@ -38,23 +37,10 @@ class pidController {
    * @param Ki integral parameter
    * @param Kd derivative parameter
    * @param TimeStep time step interval
-   * @param SetPoint desired point
+   * @param input Start position
    */
-  pidController(double, double, double, int, double);
-  /**
-   * @brief starts the controller running
-   */
-  void start();
+  pidController(double, double, double, double, double);
 
-  /**
-   * @brief stops the controller running
-   */
-  void stop();
-
-  /**
-   * @brief sets the kp value for the controller
-   * @param Kp proportional parameter
-   */
   void setKp(double);
 
   /**
@@ -100,10 +86,10 @@ class pidController {
   double getSetPoint();
 
   /**
-   * @brief sets the time interval (in seconds)
-   * @param TimeStep time interval (in seconds)
+   * @brief sets the time interval
+   * @param TimeStep time interval
    */
-  void setTimeStep(int);
+  void setTimeStep(double);
 
   /**
    * @brief calculates and returns the output value to bring the

@@ -24,12 +24,12 @@ TEST(pidTest, kValsInitializationTest) {
 
 TEST(pidTest, OutputErrorCheck01) {
   pidController c(0.01, 0.001, 0.01, 0.1, 0);
-  c.start();
-  EXPECT_NEAR(c.getOutput(2), 0.2202, 0.0001);
+  c.getOutput(2);
+  EXPECT_NEAR(c.getState(), 2.0, 0.0001);
 }
 
 TEST(pidTest, OutputErrorCheck02) {
   pidController c(0.01, 0.001, 0.01, 0.1, 0);
-  c.start();
-  EXPECT_NEAR(c.getOutput(10), 1.101, 0.001);
+  c.getOutput(10);
+  EXPECT_NEAR(c.getState(), 10.0, 0.0001);
 }
