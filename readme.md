@@ -1,6 +1,6 @@
 # C++ Boilerplate
-[![Build Status](https://travis-ci.org/jeshoward/pidController.svg?branch=week4)](https://github.com/jeshoward/pidController)
-[![Coverage Status](https://coveralls.io/repos/github/jeshoward/pidController/badge.svg?branch=master)](https://coveralls.io/github/jeshoward/pidController?branch=master)
+[![Build Status](https://travis-ci.org/jeshoward/pidController.svg?branch=implementation)](https://github.com/jeshoward/pidController)
+[![Coverage Status](https://coveralls.io/repos/github/jeshoward/pid_controller/badge.svg?branch=implementation)](https://coveralls.io/github/jeshoward/pid_controller?branch=implementation)
 ---
 
 ## Overview
