@@ -7,8 +7,8 @@
  *
  */
 
-#include <cmath>
 #include <pidController.h>
+#include <cmath>
 
 namespace std {
 pidController::pidController() {
@@ -24,7 +24,6 @@ pidController::pidController() {
 
 pidController::pidController(double Kp, double Ki, double Kd, double TimeStep,
                              double Input) {
-
   kp = Kp;
   ki = Ki;
   kd = Kd;
@@ -35,41 +34,23 @@ pidController::pidController(double Kp, double Ki, double Kd, double TimeStep,
   output = 0;
 }
 
-void pidController::setKp(double Kp) {
-  kp = Kp;
-}
+void pidController::setKp(double Kp) { kp = Kp; }
 
-void pidController::setKi(double Ki) {
-  ki = Ki;
-}
+void pidController::setKi(double Ki) { ki = Ki; }
 
-void pidController::setKd(double Kd) {
-  kd = Kd;
-}
+void pidController::setKd(double Kd) { kd = Kd; }
 
-double pidController::getKp() {
-  return kp;
-}
+double pidController::getKp() { return kp; }
 
-double pidController::getKi() {
-  return ki;
-}
+double pidController::getKi() { return ki; }
 
-double pidController::getKd() {
-  return kd;
-}
+double pidController::getKd() { return kd; }
 
-double pidController::getState() {
-  return input;
-}
+double pidController::getState() { return input; }
 
-double pidController::getSetPoint() {
-  return setPoint;
-}
+double pidController::getSetPoint() { return setPoint; }
 
-void pidController::setTimeStep(double TimeStep) {
-  timeStep = TimeStep;
-}
+void pidController::setTimeStep(double TimeStep) { timeStep = TimeStep; }
 
 double pidController::getOutput(double SetPoint) {
   /*
@@ -94,7 +75,20 @@ double pidController::getOutput(double SetPoint) {
    *
    * Return output
    */
-  return 0;
-}
 
+  double error = SetPoint - input;      // Calculate the error
+  double integral = 0, derivative = 0;  // Initialize local variables
+  while (abs(error) > 0.0001) {         // Check the absolute value of error
+    integral += error * timeStep;       // Calculate the integral term
+    derivative =
+        (error - previousError) / timeStep;  // Calculate the derivative term
+    output =
+        error * kp + integral * ki + derivative * kd;  // Calculate the output
+    input += output;                                   // Update the input
+    previousError = error;                             // Update previous error
+    error = SetPoint - input;                          // Update error
+  }
+
+  return output;
+}
 }
