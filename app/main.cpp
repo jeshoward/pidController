@@ -16,12 +16,12 @@
 
 #include <pidController.h>
 
-using namespace std;
+// using namespace std;
 
 int main() {
-  pidController c(0.01, 0.001, 0.01, 0.1, 0.0);
+  std::pidController c(0.01, 0.001, 0.01, 0.1, 0.0);
   c.getOutput(5.0);
-  cout << "State is now: " << c.getState() << endl;
+  std::cout << "State is now: " << c.getState() << std::endl;
 
 
   return 0;
